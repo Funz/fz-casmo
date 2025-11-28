@@ -8,9 +8,9 @@ TTL * PWR 17x17 Assembly Parametric Study
 PCA 1.26                    * Pin pitch in cm
 
 * Material definitions
-FUE 1 10.42/$enrichment     * UO2 fuel with variable enrichment
+FUE 1 10.42/${enrichment}     * UO2 fuel with variable enrichment
 CLA 2 ZIRC4                 * Zircaloy-4 cladding
-MOD 3 $moderator_temp/1.0   * Water moderator at variable temperature
+MOD 3 ${moderator_temp}/1.0   * Water moderator at variable temperature
 
 * Pin cell definition
 PIN 1
@@ -23,13 +23,13 @@ LPI 17 1.26
 
 * State point definition
 STA                        * State definition
-TFU=$fuel_temp            * Fuel temperature (K)
-TMO=$moderator_temp       * Moderator temperature (K)
+TFU=${fuel_temp}            * Fuel temperature (K)
+TMO=${moderator_temp}       * Moderator temperature (K)
 BOR=600                   * Boron concentration (ppm)
 
 * Depletion calculation
-DEP -40                    * Depletion to @{$burnup_steps} MWd/kgU
-@{burnup_values = " ".join([str(i) for i in range(0, int($burnup_steps)+1, 5)])}
+DEP -40                    * Depletion to @{${burnup_steps}} MWd/kgU
+@{burnup_values = " ".join([str(i) for i in range(0, int(${burnup_steps})+1, 5)])}
 BUP
 @{burnup_values}
 
