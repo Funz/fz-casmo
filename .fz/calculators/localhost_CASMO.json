@@ -1,0 +1,6 @@
+{
+    "uri": "sh://",
+    "models": {
+        "CASMO": "bash .fz/calculators/CASMO.sh"
+    }
+}
