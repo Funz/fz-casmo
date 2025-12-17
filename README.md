@@ -25,6 +25,14 @@ When using depletion input files with `DEP` card, the following arrays are extra
 - `total_pu_wt_pct`: Total Pu weight percent evolution
 - `pin_power_peak`: Pin power peaking factor evolution
 
+**Depletion metadata** (scalar values):
+- `dep_target`: Target burnup from DEP card [MWd/kgU]
+- `num_burnup_steps`: Number of depletion steps performed
+- `hist_void`: Historical (depletion-averaged) void fraction [%]
+- `hist_tfu`: Historical fuel temperature [K]
+- `hist_tmo`: Historical moderator temperature [K]
+- `hist_bor`: Historical boron concentration [ppm]
+
 #### For Single State Point Calculations (*.out files)
 For calculations without depletion, scalar values are extracted:
 - `k_inf`: Infinite multiplication factor (single value)
