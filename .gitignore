@@ -23,4 +23,4 @@ ENV/
 Thumbs.db
 
 # Casmo files
-Casmo_*
+private_examples/
